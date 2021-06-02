@@ -13,7 +13,12 @@ const vizURL =
 const vizOptions = {
   height: 800,
   width: 1000,
-  hideToolbar: true,
+  hideToolbar: true, // does not work on public
+  Category: ["Furniture", "Technology"],
+  onFirstInteractive: function () {
+    console.log("Waheeeyy, the viz is interactive");
+    document.getElementById("exportPDF").disabled = false;
+  },
 };
 
 let viz;
